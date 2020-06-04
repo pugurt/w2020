@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>메뉴</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:visited, a:link{
+			color: #333; 
+			text-decoration: none; 
+			/*언더라인이 기본값이라 이거 뺴고 싶으면 none을 적음*/
+		}
+		li{list-style: none;}
+		/*li에 있는 왼쪽에 메뉴기호 삭제한거임*/
+
+		#nav>ul>li{
+			float : left;
+			width:200px;
+			height: 50px;
+			background-color: #ddd;
+		}
+		#nav>ul>li:hover{background-color: skyblue;}		
+		/*플로트 레프트 쓰면 블럭단위로 있던 것들이 사라짐 (li로 엔터로 해둔 것들이 다 사라지고 한줄로 표기됐다!)*/
+		/*width height는 간격에 맞춰 글자들을 떨어트릴 수 있다.li 하나당 가로가 200px, 세로가 50px이라는 뜻*/
+		/*백그라운드는 간격 확인하려구 만든거임*/
+		#nav>ul>li>a{display: block;line-height: 50px; text-align : center;}
+		/*이건 '커서가 손가락으로 바뀌는건 글자에만 해당하기에' 블럭에도 적용되도록 넣은 코드다.*/
+		/*line-height는 글자 '행' 중앙에 두기 */
+		/*text-align : center는 글자 '열' 중앙에 두기*/
+	</style>
+</head>
+<body>
+	<nav id="nav">
+		<!-- ul>li*5>a[#]>{menu$}에다가 탭누르면 쮸르륵 나옴 나옴 -->
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

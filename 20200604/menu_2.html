@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>메뉴</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:visited, a:link{
+			color: #333; 
+			text-decoration: none; 
+		}
+
+		li{list-style: none;}
+			 /*동그라미 없애는 기능*/
+
+		body{background-color: #eee;}
+
+		/*nav*/
+		#nav{width: 1000px; height: 50px; background-color: #aaa;}
+		#nav>ul>li{
+			float:left;
+			width: 200px;
+			height: 50px;
+			background-color: #f00;
+			/*위에 nav에 있는 #aaa위에 덮여서 안보이는거다.*/
+		}
+		#nav>ul>li>a{
+			display: block;
+				 /*호버로 마우스 댔을때 박스쪽도 손가락 커서 나오게 해주세용*/
+			line-height: 50px;
+				 /*줄(행)간격 50이란 뜻*/
+			text-align: center;
+				 /*텍스트 중앙정렬이라는 뜻*/
+		}
+		
+		#nav>ul>li:hover{background-color: #f00; color:#fff;}
+		/*하면 빨강에 컬러가 안되는데 위에 이미 설정을 넣었기 때문에 안된대 ㅅㅂ*/
+		#nav>ul>li>a:hover{color:#fff;}
+		/*그래서 아래에 a에 호버 넣어줌*/
+
+		/* 얘는 파랑박스 만드는 시트임
+		#nav>ul>li>a:hover{background-color: #00f; color:#fff;}*/
+
+
+
+	</style>
+</head>
+<body>
+	<nav id="nav">
+		<!-- ul>li*5>a[#]>{menu$}에다가 탭누르면 쮸르륵 나옴 나옴 -->
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

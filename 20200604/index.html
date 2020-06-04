@@ -9,6 +9,15 @@
 		li{color: red;}
 		/*or 같은 속성 주고 싶으면 , 로 스타일 이으면 됨 예를들어...
 		  h3,li{color: red;}*/
+
+		  *{color: pink; padding: 0px; margin: 0px;}
+		  /*전체선택자임, 하단에 선택자로 지정 안한 애들을 전부 
+		  핑크컬러, 패딩값과 마진값을10px로 만들어버림
+		  참고로 패딩 마진 0이 디자인 할때 초기값 지정할 때 쓰곤 한다. 
+		  '초기값'을 지정할때 주로 쓴다*/
+		  /*여기서 패딩마진 0px입력할때 단축키 쓰려면  p0+tab 마진은 M0+tab*/
+		  
+
 		  .main{background-color: #FF0;}
 		  .warning{color: #f00;}
 		  /*만약!! 이미지를 배경으로 넣고 싶으면!!!
@@ -19,6 +28,19 @@
 		  /*{background-color: #fff;} >>>> 빨리치려면 bgc+tab*/ 
 		  #list>li.active{color: #f00;}
 		  /*li랑 active 사이에 스페이스바 쓰면 안됨 효과 성립이 안됨*/
+		  div>strong{background-color: white;}
+		  /* 아래 시트는 CSS 배경화면 까맣게 만드는건데 일단 주석처리 했음
+		  얘네들끼리 가끔 적용이 안되는 경우가 있는데 위에를 우선적으로 선언하면 하단이 안먹힐 때가 있음 또 선택자끼리 우선순위가 있으니 유의
+		  선택자 우선순위 ic > class > tag
+		  ul>li>strong{background-color: #000;}*/
+		  ul strong{background-color: #00f;}
+		  #list>li:hover{background-color: #ddd;}
+		  #list>li:active{background-color: #f00;
+		  			color: #fff;}
+		  			/*마우스 댔을때 빨간 백그라운드 박스 클릭했을때 글자 하얀색이란 뜻*/
+		  a:visited{color: #000;}
+		  /*방문했던 주소 하이퍼링크는 검은색으로 해주시오 라는 뜻*/
+		  a:link{color: #000;}
 	</style>
 </head>
 <body class ="main">
@@ -26,8 +48,14 @@
 	<hr>
 	<div>2학기<strong>학습내용</strong>
 		<ul id="list">
-			<li>html5</li>
+			<li class="active">
+				<a href="http://www.naver.com">네이버</a>
+			</li>
+			<li>
+				<a href="http://www.daum.net">다음</a>
+			</li>
 			<li class="active"><strong>CSS</strong></li>
+			
 			<li>javascript</li>
 		</ul>
 		<div class = "warning">60점 이하는 F!</div>
