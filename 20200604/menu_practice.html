@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>메뉴 연습하기</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		/*일단 맨끝 0,0으로 메뉴 딱붙여둠 */
+		a:visited, a:link{
+			color: white;
+			text-decoration: overline;
+			}
+
+		li{list-style: none;}
+		body{background-color: #222;}
+
+		#nyang {width: 1000px; height: 50px; background-color: #aaa;
+				margin : 0px auto;
+				} /*nyang이라 지정해 둔 아이디 값에
+				가로1000 세로50 배경 회색배경박스 마진0 중앙정렬*/
+
+		#nyang>ul>li{
+			 float: left;  /*세로 정렬 하던 li값을 가로로 정렬*/
+			 width: 150px; /*가로 간격은 150*/
+			 height: 40px; /*세로 간격은 40*/
+			 background-color: #f00; /*li값에 배경은 빨간색*/
+					 }
+
+		#nyang>ul>li>a{
+				 display: block; 
+				 	/*호버로 마우스 댔을때 박스쪽도 손가락 커서 나오게 해주세용*/
+				 line-height: 50px;
+					 /*줄(행)간격 50이란 뜻*/
+				 text-align:center; 
+					 /*텍스트 중앙정렬이라는 뜻*/
+					 }
+		 		 #nyang>ul>li>a:hover{
+		 		 		 background-color: yellow; 
+		 		 		 color: black ;
+						 width: 150px;
+						 height: 40px;
+		 		 		  }
+		 		 	 /*마우스 오버를 하면 배경은 노랑에 글자는 까만색이 된다는 뜻*/
+		 		 	 /*w랑 h 설정 안했더니 마우스 오버가 삐져나오길래 하단에150/40추가해줬음 ㅎㅎ*/
+
+		#gasa {
+				 width: 500px;
+				 background-color: #757575;
+				 color: #c5c5c5; 
+				 margin : 20px;
+				 line-height: 25px;
+			 }
+
+	</style>
+</head>
+<body>
+	<nav id="nyang">
+		 <!-- 저는 id이름을 냥(nyang)이라고 했어요 걍 귀엽게 기억하려구요 -->
+		 <!-- ul>li*5>a[#]>{menu$}에다가 탭누르면 쮸르륵 나옴 나옴 -->
+		 <ul>
+			 <li><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EC%98%A4%EB%8A%98%EC%9D%98+%EC%A0%80%EB%85%81&oquery=%ED%94%BC%EC%97%90%EC%8A%A4%ED%83%80+%EA%B0%80%EC%82%AC&tqi=UWA2Fdp0Jy0ssUad10CssssstG0-411928">
+			 	 저녁뭐먹지</a></li>
+			 <li><a href="https://www.youtube.com/watch?v=GP8_7D5eM6A">
+			 	 흐어엉 순두부네</a></li>
+			 <li><a href="#">주소란에 꼭</a></li>
+			 <li><a href="#">#이라도써주셈</a></li>
+			 <li><a href="#">menu5</a></li>
+	</ul>
+	</nav>
+
+	<nav id="gasa">
+	 <p>때가 왔어 오랜 기다림을 끝내 <br>
+	 움츠렸던 맘을 일으켜 활짝 기지개를 켜 난 Ah<br>
+	 눈빛은 어느샌가 짙어져 있는 걸<br>
+	 나의 시간이 됐어</p>
+
+	 <p>아침에게 말해 Oh 오늘이 좋을 것 같아<br>
+	 이젠 아득했던 꿈들이 멀지가 않아<br>
+	 오직 나를 위한 Woo 축제를 열어볼 거야<br>
+	 좋을 때란 거 그것 역시 내가 정해</p>
+
+	 <p>색색의 꽃을 피우고 꽃가루가 흩날리면<br>
+	 축제는 절정인 걸 끝나지 않을 이건 Climax<br>
+	 나의 모든 순간이 아름답고 눈부셔<br>
+	 이거 하나만 기억해<br>
+	 지금이라고</p>
+	 <hr>
+	 <p><strong>Fiesta</strong> 내 맘에 태양을 꾹 삼킨 채<br>
+	 영원토록 뜨겁게 지지 않을게 이 모든 계절<br>
+	 나의 모든 계절 매일 화려한 이 축제<br>
+	 한 번쯤은 꼭 놀러 와<br>
+	 It's my fiesta<br>
+	 온통 축제니까<br>
+	 It's my fiesta</p>
+	</nav>
+</body>
+</html>
