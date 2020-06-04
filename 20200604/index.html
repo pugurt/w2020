@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>셀렉터</title>
+	<style>
+		h3{color: red;}
+		li{color: red;}
+		/*or 같은 속성 주고 싶으면 , 로 스타일 이으면 됨 예를들어...
+		  h3,li{color: red;}*/
+		  .main{background-color: #FF0;}
+		  .warning{color: #f00;}
+		  /*만약!! 이미지를 배경으로 넣고 싶으면!!!
+		  .main{background-image: url(../imgs/apple.png); }를 쓴다.*/
+		  /*클래스 불러올땐 앞에 .이쥐!*/
+		  #list{background-color: mistyrose;}
+		  #list>li{color: gray;}
+		  /*{background-color: #fff;} >>>> 빨리치려면 bgc+tab*/ 
+		  #list>li.active{color: #f00;}
+		  /*li랑 active 사이에 스페이스바 쓰면 안됨 효과 성립이 안됨*/
+	</style>
+</head>
+<body class ="main">
+	<h3>web programming</h3>
+	<hr>
+	<div>2학기<strong>학습내용</strong>
+		<ul id="list">
+			<li>html5</li>
+			<li class="active"><strong>CSS</strong></li>
+			<li>javascript</li>
+		</ul>
+		<div class = "warning">60점 이하는 F!</div>
+	</div>
+</body>
+</html>
