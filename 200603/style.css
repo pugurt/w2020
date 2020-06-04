@@ -1,0 +1,4 @@
+		body{background-color: gray;}
+		p{color:#ffffff; font-size:20px;}
+		/*바디에 p가 있는 곳은 전부 스타일 시트가 적용됨, 맨 마지막 선언자는 
+		;안붙여도 되긴 함*/

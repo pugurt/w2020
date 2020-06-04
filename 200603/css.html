@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>css해야쥐.......</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- link:css라고 썼었음 style.css 라고 하는 파일을 가져와서 외부스타일을 적용하는 것임 내부였으면 걍 <style>썼음-->
+	
+
+	<!-- 위의 link는 다른 방법으로 사용도 할 수 있음 
+	<style>
+		@import url("style.css");
+			/*자바의 메소드 ...랑 비슷하다는데 뭔소리임*/
+		</style>
+	  -->
+
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, quisquam. Et, nisi maiores. Dolorum esse sunt, facilis voluptate exercitationem cum odio accusantium earum, labore provident ducimus in? Veritatis, magnam voluptatem!</p>
+	<p>Odit dolores fugiat vel, minus ex dicta unde at fuga distinctio, quidem? Voluptates temporibus repudiandae debitis corporis cumque, deserunt labore minima nobis ratione obcaecati molestias mollitia, ipsa provident ut. Praesentium!</p>
+	<p style="color: blue ; font-size:30px">Consequuntur inventore rem sed ipsam sit dolorum, voluptate fugit dolores magni, ad voluptatum. Est quis laudantium eos explicabo temporibus ipsa pariatur a tenetur, impedit nihil eveniet corrupti commodi corporis magnam.</p>
+	<!-- 이렇게 p태그 적용되는 와중에 스타일로 추가하면 얘네는 따로 적용됨 -->
+	<p>Itaque provident, expedita officiis iusto repudiandae cum sequi, quos recusandae. Error possimus ducimus ea, mollitia provident eius aperiam quis a earum sapiente, ullam placeat incidunt commodi doloribus quaerat neque numquam?</p>
+	<!-- 하....... -->
+<style>
+	/*ul{color: red;}*/
+	#nav{color: white;}
+	.menu{color: black;}
+
+
+	/*스타일 우선순위    
+		 * < tag name < class name < id < inline style < !important
+	*/
+</style>
+
+<style>
+	#nav1>li{color: red;}
+	ul#nav1>li{color: red;}
+	ul#nav1 li{color: red;}
+</style>
+	<ul id="nav1">
+		<li >menu</li>
+		<li >menu</li>
+		<li >menu</li>
+		<li >menu</li>
+		<li >menu</li>
+
+	</ul>
+
+	<!-- ul#nav1>li.menu1*5.>{menu} -->
+	ul#nav1>li.menu1*5.>{menu}
+
+	ul#nav1>li.menu1*5.>{menu}
+<!-- gk tlqgkqfjwslefhsekefhksefsksf갸 ㅂ꺼롬잗ㄹ고마ㅑㅗㅁ나로만왕ㅁㄴ암너ㅘㄴ머ㅏㅇ롬낭ㅁ너ㅏ -->
+
+
+	<header id="header">
+		<h1>logo</h1>
+		<nav id="nav">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			
+		</nav>
+		
+	</header>
+</body>
+</html>
