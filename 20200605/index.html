@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset*/
+		*{padding:0; margin: 0;}
+		body{background-image: url(../imgs/bg_grid.gif);}
+		.wrap{background-color: #F00; 
+			width: 200px; height: 100px;}
+		.box1{float: left;}
+		.box2{float: left;}
+		 .test{width: 100px;height: 100px;background-color: #f00;}
+			/*width: 20%;
+			 가로를 전체의 20%만 칠해달라는 소리
+			 height: 200px;
+			 margin:0 auto; }
+			 */
+
+			 
+			 /* 중앙정렬해달ㄹ란소리*/
+		.after{width: 200px; height: 200px; background-color: skyblue;}
+
+		.after:after{content: "안녕하세요"}
+		.after:before{content: "포에프터 center라고 쓴거 앞에뒤에 붙는다는데 어따 써"}
+		.wrap : after{content: ""; 
+					 display: block;
+					 clear : both;
+					}
+		div.wrap>div.box1{
+			 	width: 100px;
+			 	/*width: 100%쓰면;*/
+			 	/*오렌지색으로 칠한 박스 기준으로 100%칠해짐*/
+			 	height: 100px;
+			 	background-color: #ff0;
+			 	 }
+			 div.wrap>div.box2{
+			 	width: 100px;
+			 	height: 100px;
+			 	background-color: #0ff;
+			 	float: left;
+			 	}
+			 div.wrap>div.box3{
+			 	width: 100px;
+			 	height: 100px;
+			 	background-color: #0ff;
+			 	float: left;}
+
+
+			 div.wrap>div.clear{clear:both;}
+			 /*'clear'아이디 스타일 초기화*/
+			 /*float쓰고나면 꼭 다른 스타일 겹치지 않게 이거 써주기*/
+
+
+			 /*tip : ctrl+shift+d = 카피 */
+	</style>
+
+</head>
+<body>
+	 <div class="wrap">
+	 	<div class="box1">box1</div>
+	 	<div class="box2">box2</div>
+	 	<div class="box2">box3</div>
+	 	<div class="box2">clear</div>
+	 	<div class="clear"></div>
+	 	<div class="after">
+	 		center
+	 	</div>
+	 	<!-- div.box$*2>{box$} -->
+	 </div>
+	 dddd
+</body>
+</html>
