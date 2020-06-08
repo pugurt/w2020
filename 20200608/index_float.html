@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>플롯, 메뉴에 관련된 걸 만들거예요float</title>
+	<style>
+		/*~reset 하기 위한 하단의 값들~*/
+		*{margin: 0;padding: 0;} 
+		/* *은 전체선택자*/
+		a:link, 
+		a:visited{color: #000; text-decoration: none;}
+		 /*둘다 컬러 블랙 할거라 링크쪽엔 컬러 값 안써주고 쉼표 붙이면 뒤에 거 알아서 적용됨*/
+		 li{list-style: none}
+		 /*li에 왼쪽에 리스트 표시하는 특수기호 없앤거임*/
+
+		 ul.list>li{background-color: #00f; 
+		 	width: 200px;
+
+		 }
+		 ul.list>li>a{  /* .list{}로도 써도 되지만 만약 얘ㅑ네 둘이 같이 있으면 위에 거가 좀 더 우선순위라고 함*/
+		 	display: block; /*디스플레이 블럭 쓰면li 태그의 크기만큼 클릭가능 범위가 늘어남(블럭이 늘어남, 마우스 대면 손가락 뜨는 범위가 늘어난 단 소리임!)*/
+		 	text-align: center; /* 텍스트 가운데 정렬*/
+		 	line-height: 30px; /*행간늘리기!!!*/
+		 } 
+		 ul.list>li>a:hover{background-color: orange; /*이제 마우스 오버 했을 때 색이 오랜지 색으로 바뀔 것*/
+		 color: #fff; /*마우스 오버했을때 글씨는 하얀색으로 바뀔거예용*/
+		 }
+		 /*ul.list>li.blue{background-color: blue;} 5번째 리스트에 빨강을 넣을 것이다....인데 적용안돾ㅆ따 나 뭐 잘못썼냐*/
+		 ul.list>li:nth-child(5){background-color: #f00;} /*5번째 리스트ㄹ 배경을 빨간색으로 해주시오*/
+		 /*{5}에 만약 (2n)이라고 쓰면 짝수만 적용, (2n+1)은 홀수 리스트만 적용된다!*/
+		 ul.list>li:first-child{background-color: pink;} /*'첫번째리스트 '색 핑크로 바꿔주시오*/
+		 ul.list>li:last-child{background-color: purple;} /*'마지막 리스트'색 퍼플로 바꿔주시오
+		 /*둘이 같이 쓴다고il>list빠트리면 적용안된다! 꼭 써줘야 한다!*/
+
+		 .blue{background-color: gray !important;}
+		 /* ★ !important는 스타일 시트 우선순위의 '최강자'다. 아래에 써도 임폴턴트 먼저 해준다 아아주 vip이시다*/
+		 /* 참고로 다시 보는 우선순위 * < tag name < class < id < inline style < !important */
+
+		 div.box{ /*이쯤에서 다시 쓰는 div!는! 블럭 태그다!*/
+		 		 width: 300px;height: 300px;
+		 		 background-color: gray; /*헐 gray랑 grey랑 적용되는거 똑같대 */
+		 }
+		 div.box:after{
+		 	content: "!!!";
+		 	color : white; /*after 적용한거라 box 클래스에 뭔말을 쓴들 뒤에 흰 색의 !!!가 붙을 것이다@!#2ㅈ#ㅃㅉ!ㅉ@!*/
+		 }
+	</style>
+</head>
+<body>
+	<!-- ul.list>li*10>a[#]>{list$} -->
+	<ul class="list">
+		<li><a href="#">list1</a></li>
+		<li><a href="#">list2</a></li>
+		<li><a href="#">list3</a></li>
+		<li><a href="#">list4</a></li>
+		<li class="blue"><a href="#">list5</a></li>
+		<li><a href="#">list6</a></li>
+		<li><a href="#">list7</a></li>
+		<li><a href="#">list8</a></li>
+		<li><a href="#">list9</a></li>
+		<li><a href="#">list10</a></li>
+	</ul>
+
+	<div class="box">안녕하세요.......</div>
+</body>
+</html>

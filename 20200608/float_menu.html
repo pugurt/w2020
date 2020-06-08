@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float_menu</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:link ,a : visited{color: #000; text-decoration: none;}
+		li{list-style: none;}
+
+		/*menu*/
+		 .navWrap{width: 1000px; background-color: skyblue; 
+		 		  margin: 0 auto;
+		 		  margin-bottom: 10px;
+		 		  /*margin-bottom: 10px;   상단 메뉴바랑 오렌지 블럭이랑 간격 띄우는 역할 한 거임*/
+		 		  /*보통 칸을 띄울때 마진 보틈값으로 사용 한다!!!!!!!*/
+		 		 }
+		 /*.navWrap>ul{} 얘는 안쓰니까 주석으로 지운거다*/
+		 .navWrap>ul:after{content: ""; display: block; clear: both;}
+		 /*이거 모라는건지 모르겠다 일단 외우라구 한다... 플롯 사용하고 클리어보스의 다른 사용법이라고 한다.*/
+		 .navWrap>ul>li{float: left; width: 16.666%;}
+		 /*컨트롤 쉬프트 오 ㅏ이 하면 간단한 수식 계산같은거 해준다 ex w1000/5 하고 탭 누르면 width200떠줌*/
+		 /*px대신 p를 누르면 %로 써진다. 부모자를 기준으로 정렬이 된다고 한다.*/
+		 /*나눠서 순환소수로 반올림으로 계산될 경우엔 적당히 세자리수까지만 써주는게 좋다.*/
+		 /*16.67하면 틀어지니까 16.666이라 쓴 것*/
+		 .navWrap>ul>li>a{
+		 	display: block;
+		 	line-height: 50px;
+		 	text-align: center;
+		 }
+		 .navWrap>ul>li>a:hover{
+		 	background-color: blue;
+		 	color: white;
+		 }
+		 /*visual Wrapper*/
+		 div.visualWrap{
+		 	height: 400px; 
+		 	background-color: orange;}
+
+	</style>
+</head>
+<body>
+	<nav class="navWrap">  <!-- w1000 -->
+		 <!-- ul>li*5>a[#]>{TEXT$} -->
+		 <ul>
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="#">MENU5</a></li>
+			<li><a href="#">MENU6</a></li>
+		</ul>
+	</nav>
+	<div class="visualWrap"></div>
+</body>
+</html>
