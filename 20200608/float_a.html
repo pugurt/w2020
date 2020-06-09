@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>플롯연습</title>
+	<style>
+		/*우린 우선 리셋을 할것이다*/
+		a{margin: 0; padding: 0;}
+		a:link, a:visited{color: black; text-decoration: none;}
+		li{list-style: none;}
+			/*마진0 패딩0 링크,방문한 링크 눌렀을때 텍스트 때깔 검정, 
+			  li옆에 기호표시 없앨거예요*/
+
+
+	/*메뉴에 스타일을 적어봅쉐이*/
+	.nyam{width: 1000px; background-color: red;
+		margin : 0 auto;
+		margin-bottom: 10px;
+		}
+			/*상단 메뉴 타이틀 박스는 100으로, 백그라운드는 레드*/
+			/*마진 0에 오토면 '중앙정렬 자동!'' */
+
+	.nyam>ul:after{content: ""; display: block; clear:both;}
+	/* : 사이 절대 !!! 스페이스바로 떨어트리지 말 것이다!*/
+	.nyam>ul>li{float: left ; width:16.666%;}
+	.nyam>ul>li>a{
+		display: block;
+		line-height: 50px;
+		text-align: center;
+	}
+	.nyam>ul>li>a:hover{
+		background-color: blue;
+		color: white;
+	}
+	
+	/*메인 이미지가 될 쪽의 스타일을 적어봅쉐이*/
+	div.nyamnyam{
+		height: 400px;
+		background-color: orange;
+	}
+
+	</style>
+	
+</head>
+<body>
+	<div class="nyam">
+		<ul>
+			<li><a href="#">메뉴예용</a></li>
+			<li><a href="#">나두 메뉴예용</a></li>
+			<li><a href="#">난나옹이다옹</a></li>
+			<li><a href="#">흐어어엉</a></li>
+			<li><a href="#">메뉴파이부</a></li>
+			<li><a href="#">크어어어어</a></li>
+		</ul>
+	</div>
+	<div class="nyamnyam">
+	</div>
+</body>
+</html>
