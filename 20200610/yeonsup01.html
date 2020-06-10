@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>뚠뚠뚠 너와 나 입을 맞춰~! 함필규!</title>
+	<style>
+		/*reset부터 합쉐이*/
+		*{margin: 0;padding: 0; box-sizing: border-box;}
+		a:link,a:visited{text-decoration: none; color: #000;}
+		li{list-style: none;}
+
+		/*header*/
+		div.chickenTop{
+			width: 980px;height: 75px;
+			margin: 0 auto;
+			}
+			 /*헤더 탑에 일단 박스를 980사이즈로 만들어줘용*/
+
+		div.chickenTop>h1.logo{
+			text-align: center;
+			line-height: 75px
+			}
+			 /*박스안에 들어갈 치킨먹고싶은 텍스트를 센터로 두고 기장을 75로*/
+
+		div.chickenWrap{background-color: #ffa200;}
+			/*메뉴바를 백그라운드를 오렌지 색으로 했어용*/
+		div.chickenWrap>nav.chickenMenu>{width: 980px;margin: 0 auto;}
+		div.chickenWrap>nav.chickenMenu>ul:after{
+			content: ""; display: block; clear: both;
+			/*★이게 뭐지*/
+			}
+		div.chickenWrap>nav.chickenMenu>ul>li{
+			float: left; width: 163.333px;
+			border-right: 1px solid #fff298;
+			}
+			/*플롯을 통해 메뉴바!에 있는 리스트들을 가로로 왼쪽정렬 했다*/
+			/*163.333은 전체 980/6을 한 값인거다 서로 나눠먹어야하지 않겠는가*/
+			/*보더라이트는 보더 '오른쪽'에 1픽셀로 라인을 주는거다. 
+			여기선 메뉴바에 라인을 입력해주기 위해 썼다. 보더 입력은 축약해서 border:Npx solid #(색)으로 쓸 수도 있다!) '*/
+		div.chickenWrap>nav.chickenMenu>ul>li:first-child{border-left: 1px solid #fff298;}
+			/* 막대기 줄때 꼭 맨 오른쪽은 안주어지니까 포스트 차일드를 통해 1픽셀 막대기 하나 만들어주는 것임*/
+		div.chickenWrap>nav.chickenMenu>ul>li>a{
+			color: white; display: block;
+			text-align: center; height: 45px; 
+			line-height: 45px;
+			}
+			/*li에 있는 글씨들 흰색으로 바꿔주시구요 블럭에 포함된것도 같이 잡히게 해주세요*/
+			/*텍스트는 가운데정렬해주시구요 행간은 45예요 */
+			/*라인헤이트는 글자가 저 오렌지 박스 안에서 어느정도 세로간격을 띄워주느냐! */
+		div.chickenWrap>nav.chickenMenu>ul>li>a:hover{
+			background-color: #0048ff;
+			}
+			/*크어어 마우스 오버하면 파랑으로 변하는 호버값이다아아악*/
+
+		
+		/*pizzaWrap*/
+		.pizzaWrapWrap{height: 400px; background-color: #18ff00;
+			background-image: url();
+			}
+
+
+/*★★★★★★★★★으악 위에 url 이거 입력하다가 끝났어용 ★★★★★★★★*/
+
+
+
+	</style>
+</head>
+<body>
+	<div class="chickenTop">
+		<h1 class="logo"><a href="">치킨먹고싶다</a></h1>
+	</div>
+	<div class="chickenWrap">
+		<nav class="chickenMenu">
+			<ul>
+				<li><a href="#">님이상한말만하구</a></li>
+				<li><a href="#">재미없어요</a></li>
+				<li><a href="#">언팔할게요</a></li>
+				<li><a href="#">님 재밌고</a></li>
+				<li><a href="#">이상한 말만해요</a></li>
+				<li><a href="#">팔로할게요</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="pizzaWrap"></div>
+	<div class="section">
+		<ul class="card">
+			<ul>
+				<li><img src="yeonsup_img/1.jpg" alt="냠">
+						<h3>펭귄</h3>
+						<p>특:남극의 일진인 편</p>
+				</li>
+				<li><img src="yeonsup_img/2.jpg" alt="냠">
+						<h3>돌고래</h3>
+						<p>특:복근있는 편</p>
+				</li>
+				<li><img src="yeonsup_img/3.jpg" alt="냠">
+						<h3>고양이</h3>
+						<p>특:예의바른편</p>
+				</li>
+				<li><img src="yeonsup_img/4.jpg" alt="냠">
+						<h3>개</h3>
+						<p>특:최근푸킷몬에나오는편</p>
+				</li>
+				<li><img src="yeonsup_img/5.jpg" alt="냠">
+						<h3>하늘</h3>
+						<p>특:미세먼지없는편</p>
+				</li>
+			</ul>
+		</ul>
+	</div>
+</body>
+</html>

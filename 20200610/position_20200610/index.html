@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>포지션</title>
+	<style>
+		/*reset부터 합쉐이*/
+		*{margin: 0;padding: 0; box-sizing: border-box;}
+		a:link,a:visited{text-decoration: none; color: #000;}
+		li{list-style: none;}
+
+		body{background-image: url(../../imgs/bg_grid.gif);}
+
+		div.box1,div.box2,div.box3{width: 100px;height: 100px;}
+		div.box1{
+			background-color: skyblue;
+			/*position : relative; top:20px; left: 20px;*/
+				/*relative는 현재 위치를 기준으로 위치를 재지정한다*/
+				/*포지션 앞에 꼭 쥐어줘야 함*/
+				/*마진과는 달리 다른 박스에 영향을 미치지 않고 '독자적'으로 움직인다!*/
+			/*margin-left: 50px;margin-top:20px;*/
+				/*위에처럼 이렇게 쓰면 하단 박스에 영향을 줘버린다!*/
+				/*렐러티브를 쓸땐 다른 박스에 같은 영향을 줄 수도 있으니 마진값을 되도록이면 쓰지 않을 것!*/
+			/*margin: 0 auto;*/
+				/*적용은 되나 최대한 쓰지 마라... 렐러티브 영향을 받은 기준으로 중앙정렬이 될 수 있다.*/
+			position:absolute; left: 20px;top: 20px;
+				/*자유로운 영혼, 부모자를 기준으로 어느 위치든 갈 수 있음, 이라는데 뭐라한거지 뭔차이야*/
+				/*아헐 얘는 창 줄여도 따라온다*/
+			z-index:2;
+			}
+		div.box2{
+			background-color: red;
+			position:absolute; left: 40px; top: 40px;
+			/*항상 포지션이 있을때 div가 나중에 있는 박스가 위로 올라간다!*/
+			/*만약 겹치는 순서를 바꿔주고 싶으면???? 바디에 div 순서를 바꿔주면 되는거쥐*/
+			/*아니면 z-index라는 기능을 쓰자 숫자가 높으면 우선순위인가부다*/
+			z-index:1;
+			}
+		div.box3{
+			background-color: blue;
+			}
+
+		
+	</style>
+</head>
+<body>
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	<div class="box3">box3</div>
+</body>
+</html>
