@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>흐어엉 내 휴대폰</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<!-- 넌! 너무 잇쌍줚이야! -->
+	<script>
+		$(document).ready(function(){
+		 $(".slider").bxSlider({
+		 	controls:false,
+		 	pagerCustom:".bx-pager",
+				auto:true
+			});
+		});
+	</script>
+	<style>
+		.wrapper{width: 1260px; height: 740px; margin: 0 auto;
+				position: relative;}
+		.bx-pager{
+			position: absolute; bottom: 0;
+			width: 100%;}
+		.bx-pager a{
+			display: block; width: 25%;
+			float: left;
+			line-height: 45px;
+			text-align: center;
+			background-color: #f00;
+			color: white;
+			font-size: 1.5em;
+			}
+		.bx-pager a.active{
+			background-color: blue;}
+
+		div.sliderWrap{width: 1260px;margin: 0 auto;}
+		.bx-wrapper {
+ 		   -moz-box-shadow: none;
+    	   -webkit-box-shadow: none;
+    	    box-shadow: none;
+    		border: 0 none;
+    		margin-bottom: 0;
+    		}
+		
+		.sliderWrap .txtWrap{
+			width: 400px;
+			position: absolute;top:160px;
+			right: 120px;
+			}
+		.sliderWrap .txtWrap h2{font-size: 30px;}
+		.sliderWrap .txtWrap h2:after{
+			content:"";display: block;height: 2px;
+			background-color:orange;margin:10px 0;
+			}
+		.sliderWrap .txtWrap p{margin-bottom: 30px;}
+		.sliderWrap .txtWrap a{
+			background-color: rgba(0,0,0,0); color: black;
+			/*opacity: 0.5;*/
+			width: 200px; height: 40px;
+			display: block; text-align: center;line-height: 40px;
+			border: 1px solid #000; border-radius:20px;
+			 font-weight: bold;
+		}
+		.sliderWrap .txtWrap a:hover{
+			background-color: rgba(0,0,0,1);
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li>
+					<img src="../imgs/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>흐어엉 내 휴대폰1</h2>
+						<p>죽었다구</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="../imgs/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>흐어엉 내 휴대폰2</h2>
+						<p>죽었다구</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="../imgs/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>흐어엉 내 휴대폰3</h2>
+						<p>죽었다구</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="../imgs/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>흐어엉 내 휴대폰4</h2>
+						<p>죽었다구</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+		<div class="bx-pager clearfix">
+			<a href="#" data-slide-index="0">으아악1</a>
+			<a href="#" data-slide-index="0">흐아악2</a>
+			<a href="#" data-slide-index="0">크아악3</a>
+			<a href="#" data-slide-index="0">뜨아악4</a>
+		</div>
+	</div>
+</body>
+</html>

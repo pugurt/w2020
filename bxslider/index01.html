@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bx slider흐아악</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0; box-sizing: border-box;}
+		a:link, a:visited{color: #000; text-decoration: none}
+		li{list-style: none}
+	</style>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<!-- CSS폴더에 비엑스 슬라이더 링크 걸은ㄱ임 -->
+	<!-- 링크는 외부 스타일 시트를 불러올때 쓰는거다 스크립트랑 좀 차이 있다나봄 -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<!-- script:src + 탭 -->
+	<!-- 스크립트 소스 순서 꼭 지키고 저거 둘다 있어야 함 안그러면 에러뜸 -->
+	<style>
+		div.visual{width: 1200px;height: 500px;margin:0 auto;}
+		nav.gnbWrap{
+			width: 1200px;  margin: 10px auto; 
+			border-top: 3px solid #ddd;
+			border-bottom: 2px solid #ddd;
+		}
+		/*nav.gnbWrap>ul{}*/
+		nav.gnbWrap>ul:after{content: ""; clear: both; display: block;}
+		nav.gnbWrap>ul>li{float:left; width: 20%;}
+		nav.gnbWrap>ul>li>a{display: block; text-align: center;line-height: 45px;}
+		nav.gnbWrap>ul>li>a:hover{background-color: blue; color: white;}
+
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true});
+			// bxSlider라고 꼭 S 대문자라구 함
+			// {auto:true} -> 자동으로 슬라이드 돌아가시오
+		});
+		// $는 뭐지 제이 쿼리? 라는 뜻이라고 함
+
+		 
+		// $(document).ready();
+		// $(document).ready(function(){});
+			// $(document).ready(function(){
+			// 	$(".slider").bxslider({auto:true});
+			// });
+	</script>
+</head>
+<body>
+	<nav class="gnbWrap">
+		<ul>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+		</ul>
+	</nav>
+	<div class="visual">
+		<ul class="slider">
+			<li><img src="images/pc01.jpg" alt="이미지1"></li>
+			<li><img src="images/pc02.jpg" alt="이미지2"></li>
+			<li><img src="images/pc03.jpg" alt="이미지3"></li>
+			<!-- 이미지 사이즈가 다들 통일돼야 한다! 주의! -->
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>box model 헝잉잉야</title>
+	<style>
+		/* reset */
+		*{margin: 0;padding: 0;}
+		a:link,a visited{color: #000; text-decoration: none}
+		li{list-style: none}
+
+		body{background-image: url(../imgs/bg_grid.gif);}
+		div.box{
+			width: 200px;height: 200px;
+			background-color: orange;
+			margin: 10px;
+			padding: 10px; /*패딩크기*/
+			
+			border-color: #000; /*패딩색*/
+			border-width: 10px; /*패딩넓이*/ 
+			border-style: solid; /*패딩스타일 채워지기*/
+			/*border-(탑보튼 등등 입력 가능): 10px solid #000; 로 줄여쓰기 가능*/
+			/*bd+ 쓰고 탭 누르면 border: 1px solid #000라고 띄워줌;*/
+			box-sizing: border-box; /*이건 또 어따쓰는거여*/ 
+		}
+	</style>
+</head>
+<body>
+	<div class="box">test</div>
+</body>
+</html>
